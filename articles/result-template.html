@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[Result] 实验/数值结果 | Zhang Guangjian</title>
+<meta name="description" content="结果模板：设置、图表、结果与误差、文献对照、待复现。">
+<link rel="stylesheet" href="../styles/main.css" />
+<link rel="stylesheet" href="../assets/lib/highlight/styles/github.min.css" />
+<link rel="stylesheet" href="../assets/lib/katex/katex.min.css" />
+<style>
+  article { max-width: 840px; margin: 0 auto; padding: 1rem; }
+  figure { margin: 1rem 0; }
+  figcaption { color:#666; font-size:.95rem; }
+  .meta { color:#666; margin-bottom:1rem; }
+  .copybox { width:100%; min-height:6rem; }
+  .badge { background:#efe; border-radius:.4rem; padding:.1rem .4rem; margin-left:.25rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>张广健 · Articles</h1>
+  <nav>
+    <a href="../index.html">Home</a> |
+    <a href="./index.html">Articles</a> |
+    <a href="../resume/index.html">Resume</a>
+  </nav>
+</header>
+
+<main>
+<article>
+  <!-- front matter 
+  title: [Result] 课题名
+  date: 2025-10-15
+  tags: result, reproducibility
+  lang: zh
+  summary: 一句话描述主要发现与误差水平
+  -->
+
+  <h1>结果：课题名 <span class="badge">Result</span></h1>
+  <p class="meta">日期：2025-10-15 · 语言：zh · tags: result, reproducibility</p>
+
+  <h2>设置（参数与单位）</h2>
+  <ul>
+    <li>参数：$v_F=1.0$, $\Delta=1.0$, $\eta=10^{-3}$。</li>
+    <li>单位与坐标：说明 wavenumber/energy 的单位与坐标系。</li>
+  </ul>
+
+  <h2>图表</h2>
+  <figure>
+    <img src="../assets/img/placeholder.svg" alt="结果图占位符" width="640" height="360" loading="lazy" />
+    <figcaption>图 1：谱函数 $A(\omega,k)$ 示例，参数如上。</figcaption>
+  </figure>
+
+  <h2>结果与误差</h2>
+  <p>定量报告（均值、方差、置信区间/系统误差来源）。</p>
+
+  <h2>文献对照</h2>
+  <p>与参考论文/教材的式子或图进行对比，说明一致或差异处。</p>
+
+  <h2>待复现</h2>
+  <ul>
+    <li>列出尚未复现/待改进事项。</li>
+  </ul>
+
+  <hr />
+  <h3>可复制的 LaTeX 片段</h3>
+  <textarea class="copybox" readonly>
+% 用于论文或报告直接粘贴
+A(\omega,k) = -2\,\text{Im}\,G^R(\omega,k)
+  </textarea>
+
+  <p>许可：CC BY-NC-SA 4.0</p>
+</article>
+</main>
+
+<footer><p>© 2025 Zhang Guangjian.</p></footer>
+
+<script defer src="../assets/lib/highlight/highlight.min.js"></script>
+<script defer src="../assets/lib/katex/katex.min.js"></script>
+<script defer src="../assets/lib/katex/contrib/auto-render.min.js"></script>
+<script defer src="../scripts/main.js"></script>
+</body>
+</html>

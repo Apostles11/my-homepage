@@ -1,0 +1,46 @@
+body {
+  font-family: "Noto Sans SC", sans-serif;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+main { padding: 0 .5rem; }
+article h1 { font-size: 1.8rem; }
+article h2 { margin-top: 1.25rem; font-size: 1.25rem; }
+pre code { font-size: .95rem; }
+header nav a { margin: 0 .25rem; }
+@media (max-width: 640px) {
+  body { margin: 1rem auto; padding: 0 .75rem; }
+}
+
+@media print {
+  body { color: #000; }
+  h1,h2,h3 { color: #000; }
+}
+
+.badge { display:inline-block; padding:.1rem .4rem; border-radius:.4rem; font-size:.8rem; background:#eef; }
+.meta { color:#666; }
+article { word-wrap: break-word; }
+img { max-width: 100%; height: auto; }
+
+small { color:#666; }

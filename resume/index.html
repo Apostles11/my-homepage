@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Zhang Guangjian</title>
+  <meta name="description" content="张广健的个人简历（中英双语），含教育、研究、项目、技能与联系方式。">
+  <link rel="stylesheet" href="../styles/main.css" />
+  <style>
+    /* 页面样式微调（不影响全站） */
+    .resume { max-width: 900px; margin: 0 auto; padding: 1rem; }
+    .resume header h1 { margin-bottom: .25rem; }
+    .resume .meta { color:#666; margin-bottom: 1rem; }
+    .actions { display:flex; gap:.5rem; flex-wrap:wrap; margin: 1rem 0; }
+    .btn { display:inline-block; padding:.5rem .9rem; border:1px solid #ccc; border-radius:.5rem; text-decoration:none; }
+    .btn:hover { background:#f6f8fa; }
+    .section { margin: 1.25rem 0; }
+    .section h2 { font-size:1.25rem; margin-bottom:.5rem; }
+    .item { margin:.5rem 0; }
+    .lang-zh { display: block; }
+    .lang-en { display: none; }
+    /* 打印友好：只打印正文，隐藏导航与按钮 */
+    @media print {
+      nav, .actions, footer { display:none !important; }
+      body { max-width: none; margin: 0; }
+      .resume { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>张广健 · Personal Homepage</h1>
+    <nav>
+      <a href="../index.html">Home</a> |
+      <a href="../articles/example.html">Articles</a> |
+      <a href="./index.html" aria-current="page">Resume</a> |
+      <a href="../index.html#about">About</a> |
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="resume" data-lang="zh">
+    <header>
+      <h1 class="lang-zh">个人简历</h1>
+      <h1 class="lang-en">Curriculum Vitae</h1>
+      <p class="meta lang-zh">最近更新：2025-10-15 · PDF 可下载</p>
+      <p class="meta lang-en">Last updated: 2025-10-15 · PDF available</p>
+    </header>
+
+    <div class="actions">
+      <!-- 默认中文；切换语言时脚本会更新 href / download / 文案 -->
+      <a id="downloadPdfBtn" class="btn" href="./pdf/cv-zh.pdf" download="cv-zh.pdf" rel="nofollow">⬇ 下载 PDF</a>
+      <button class="btn" data-toggle-lang>中/EN 切换</button>
+      <!-- 已移除：浏览器打印按钮 -->
+    </div>
+
+    <!-- 基本信息 -->
+    <section class="section">
+      <h2 class="lang-zh">基本信息</h2>
+      <h2 class="lang-en">Profile</h2>
+      <div class="item lang-zh">
+        深圳大学 物理学本科 · 研究方向：全息超导 / AdS/CFT（引力侧计算）<br>
+        邮箱：guangjian.zhang42@outlook.com · GitHub/主页：null
+      </div>
+      <div class="item lang-en">
+        B.Sc. in Physics, Shenzhen University · Interests: Holographic Superconductors / AdS/CFT (gravity side)<br>
+        Email: guangjian.zhang42@outlook.com · GitHub/Homepage: null
+      </div>
+    </section>
+
+    <!-- 教育 -->
+    <section class="section">
+      <h2 class="lang-zh">教育经历</h2>
+      <h2 class="lang-en">Education</h2>
+      <div class="item lang-zh">
+        2023.09 – 2027.07 (预计毕业) · 深圳大学 · 物理学（本科，卓越班）
+      </div>
+      <div class="item lang-en">
+        2023.09 – 2027.07 (expected) · Shenzhen University · B.Sc. in Physics (Excellence Class)
+      </div>
+    </section>
+
+    <!-- 研究 / 项目 -->
+    <section class="section">
+      <h2 class="lang-zh">研究与项目</h2>
+      <h2 class="lang-en">Research & Projects</h2>
+      <div class="item lang-zh">
+        大创项目：全息超导（含晶格/配对密度波探索）；负责引力侧计算与推导。
+      </div>
+      <div class="item lang-en">
+        Undergraduate Research: Holographic superconductors (with lattice/PDW); gravity-side calculations and derivations.
+      </div>
+      <div class="item lang-zh">
+        会议：null
+      </div>
+      <div class="item lang-en">
+        Events: null
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="section">
+      <h2 class="lang-zh">技能</h2>
+      <h2 class="lang-en">Skills</h2>
+      <div class="item lang-zh">
+        物理：广义相对论基础、场论入门、谱函数与自能<br>
+        计算：Python/Mathematica/MATLAB，Git 基本操作，Markdown/LaTeX 写作
+      </div>
+      <div class="item lang-en">
+        Physics: GR basics, intro QFT, spectral functions & self-energy<br>
+        Computing: Python/Mathematica/MATLAB, basic Git, Markdown/LaTeX
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section">
+      <h2 class="lang-zh">联系方式</h2>
+      <h2 class="lang-en">Contact</h2>
+      <div class="item lang-zh">邮箱：guangjian.zhang42@outlook.com · 微信/电话：null</div>
+      <div class="item lang-en">Email: guangjian.zhang42@outlook.com · WeChat/Phone: null</div>
+    </section>
+
+    <hr>
+    <p class="lang-zh">许可：CC BY-NC-SA 4.0</p>
+    <p class="lang-en">License: CC BY-NC-SA 4.0</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Zhang Guangjian.</p>
+  </footer>
+
+  <!-- 若页面没有代码/公式，也可以不引这些库；保留统一性即可 -->
+  <script defer src="../assets/lib/highlight/highlight.min.js"></script>
+  <script defer src="../assets/lib/katex/katex.min.js"></script>
+  <script defer src="../assets/lib/katex/contrib/auto-render.min.js"></script>
+  <script defer src="../scripts/main.js"></script>
+
+  <!-- 语言切换与下载 PDF 动态链接 -->
+  <script>
+  (function () {
+    const LANG_KEY = 'site.lang';
+    const btnToggle = document.querySelector('[data-toggle-lang]');
+    const html = document.documentElement;
+    const zhEls = document.querySelectorAll('.lang-zh');
+    const enEls = document.querySelectorAll('.lang-en');
+    const aDownload = document.getElementById('downloadPdfBtn');
+
+    const PDF = {
+      zh: { href: './pdf/cv-zh.pdf', name: 'cv-zh.pdf', label: '⬇ 下载 PDF' },
+      en: { href: './pdf/cv-en.pdf', name: 'cv-en.pdf', label: '⬇ Download PDF' }
+    };
+
+    // 读取优先级：?lang=xx > localStorage > <html lang> > 'zh'
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    const saved = localStorage.getItem(LANG_KEY);
+    const initial = (urlLang || saved || html.getAttribute('lang') || 'zh').toLowerCase();
+
+    setLang(initial, false);
+
+    if (btnToggle) {
+      btnToggle.addEventListener('click', () => {
+        const next = (html.getAttribute('lang') === 'zh') ? 'en' : 'zh';
+        setLang(next, true);
+      });
+    }
+
+    function setLang(lang, persist) {
+      if (!['zh','en'].includes(lang)) lang = 'zh';
+      html.setAttribute('lang', lang);
+
+      // 显示/隐藏两套内容
+      zhEls.forEach(el => el.style.display = (lang === 'zh' ? '' : 'none'));
+      enEls.forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
+
+      // 更新下载按钮
+      if (aDownload) {
+        aDownload.href = PDF[lang].href;
+        aDownload.setAttribute('download', PDF[lang].name);
+        aDownload.textContent = PDF[lang].label;
+      }
+
+      // 更新地址栏 ?lang=xx（无刷新），并保存选择
+      if (persist) {
+        const sp = new URLSearchParams(location.search);
+        sp.set('lang', lang);
+        history.replaceState(null, '', `${location.pathname}?${sp.toString()}`);
+        localStorage.setItem(LANG_KEY, lang);
+      }
+    }
+  })();
+  </script>
+</body>
+</html>
