@@ -1,0 +1,16 @@
+{
+  "base_url": "https://guangjianzhang.cn",
+  "include_ext": [".html"],
+  "exclude_dirs": ["assets", "styles", "scripts", ".git", ".github"],
+  "changefreq_rules": {
+    "/": "weekly",
+    "/articles/": "weekly",
+    "/resume/": "monthly"
+  },
+  "priority_rules": {
+    "/": 1.0,
+    "/articles/": 0.9,
+    "/resume/": 0.8
+  },
+  "make_robots": true
+}
