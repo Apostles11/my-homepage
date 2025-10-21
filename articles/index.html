@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" class="theme-blue">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Articles | Zhang Guangjian</title>
-  <meta name="description" content="文章列表：阅读札记、推导与结果汇总。">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | Zhang Guangjian</title>
+  <meta name="description" content="张广健的博客与阅读札记。记录全息超导、AdS/CFT 与物理学习笔记。">
   <link rel="stylesheet" href="../styles/main.css" />
-  <style>
-    .post-list { list-style:none; padding:0; }
-    .post-item { padding:.75rem 0; border-bottom:1px solid #eee; }
-    .badge { display:inline-block; padding:.1rem .4rem; border-radius:.4rem; background:#eef; margin-left:.25rem; font-size:.8rem; }
-    .meta { color:#666; font-size:.95rem; }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>张广健 · Articles</h1>
-    <nav>
-      <a href="../index.html">Home</a> |
-      <a href="./index.html" aria-current="page">Articles</a> |
-      <a href="../resume/index.html">Resume</a> |
-      <a href="../index.html#about">About</a> |
-      <a href="../index.html#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- 统一导航占位 -->
+  <div id="app-header"></div>
 
-  <main>
-    <h2>所有文章</h2>
-    <ul class="post-list">
-      <li class="post-item">
-        <a href="./example.html">示例文章：公式与代码高亮</a>
-        <span class="badge">demo</span>
-        <div class="meta">2025-10-15 · zh · tags: math, code</div>
-      </li>
-      <li class="post-item">
-        <a href="./reading-log-template.html">模板：Reading Log</a>
-        <span class="badge">template</span>
-        <div class="meta">2025-10-15 · zh/en · tags: reading, notes</div>
-      </li>
-      <li class="post-item">
-        <a href="./derivation-template.html">模板：Derivation</a>
-        <span class="badge">template</span>
-        <div class="meta">2025-10-15 · zh/en · tags: derivation, gr</div>
-      </li>
-      <li class="post-item">
-        <a href="./result-template.html">模板：Result</a>
-        <span class="badge">template</span>
-        <div class="meta">2025-10-15 · zh/en · tags: result, reproducibility</div>
-      </li>
-    </ul>
+  <main class="container">
+    <section class="section">
+      <h1>Blog / 博客</h1>
+      <p style="color:var(--muted); margin-bottom:1rem;">
+        记录阅读札记、推导笔记与阶段性研究结果。
+      </p>
+
+      <!-- === 文章列表（示例） === -->
+      <article class="section" style="margin-bottom:1rem;">
+        <h2><a href="#">构建全息超导：阅读札记（一）</a></h2>
+        <p style="color:var(--muted); margin:.3rem 0;">
+          2025-09-30 · AdS/CFT, Holography
+        </p>
+        <p>
+          从 Einstein-Maxwell-Scalar 模型出发，讨论 Δ=1 与 Δ=2 条件下的凝聚行为差异，并分析边界条件与电导率计算。
+        </p>
+      </article>
+
+      <article class="section" style="margin-bottom:1rem;">
+        <h2><a href="#">Reading Log | Semi-holographic Fermi Liquid</a></h2>
+        <p style="color:var(--muted); margin:.3rem 0;">
+          2025-08-18 · AdS/CMT, Fermi Liquid
+        </p>
+        <p>
+          阅读 McGreevy 等人的半全息费米液体模型，记录边界自能与谱函数计算过程中的关键技巧。
+        </p>
+      </article>
+
+      <article class="section" style="margin-bottom:1rem;">
+        <h2><a href="#">时空晶体的相对论推广初探</a></h2>
+        <p style="color:var(--muted); margin:.3rem 0;">
+          2025-07-12 · Theoretical Notes
+        </p>
+        <p>
+          基于时空晶体的概念，讨论其在相对论框架下的推广可能性及与引力背景的关系。
+        </p>
+      </article>
+
+      <!-- 后续新增文章时，只需复制上方 <article> 块 -->
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 Zhang Guangjian. CC BY-NC-SA 4.0.</p>
-  </footer>
+  <!-- 页脚占位 -->
+  <div id="app-footer"></div>
+
+  <!-- 统一脚本 -->
+  <script src="../scripts/i18n.js"></script>
+  <script src="../scripts/layout.js" data-page="blog"></script>
 </body>
 </html>

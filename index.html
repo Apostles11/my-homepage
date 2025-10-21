@@ -1,67 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" class="theme-blue">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | My Personal Site</title>
-  <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home | Zhang Guangjian</title>
+  <meta name="description" content="张广健的个人主页：研究、札记与简历。">
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="assets/icon.png" />
 </head>
 <body>
-  <header>
-    <h1>张广健 · Personal Homepage</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="articles/index.html">Articles</a> |
-    <a href="resume/index.html">Resume</a> |
-    <a href="#About">About</a> |
-    <a href="#Contact">Contact</a>
-  </nav>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" data-i18n="brand">张广健</a>
+      <a href="/#about" data-i18n="nav.about">关于</a>
+      <a href="/#research" data-i18n="nav.research">研究</a>
+      <a href="/articles/" data-i18n="nav.blog">博客</a>
+      <a href="/resume/" data-i18n="nav.resume">简历</a>
+      <a href="/#contact" data-i18n="nav.contact">联系</a>
+      <span class="spacer"></span>
+      <button class="lang-switch" id="langBtn" aria-label="Switch language">
+        <span id="langLabel">中文 / EN</span>
+      </button>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>This is my personal homepage for notes, research, and reflections.</p>
-    </section>
 
-<section>
-  <h2>Recent Articles</h2>
-  <ul>
-    <li>
-      <a href="articles/result-template.html">[Result] 结果与误差模板</a>
-      <small> · 2025-10-15 · tags: result, reproducibility</small>
-    </li>
-    <li>
-      <a href="articles/derivation-template.html">[Derivation] 推导模板</a>
-      <small> · 2025-10-15 · tags: derivation, gr</small>
-    </li>
-    <li>
-      <a href="articles/reading-log-template.html">[Reading Log] 阅读札记模板</a>
-      <small> · 2025-10-15 · tags: reading, notes</small>
-    </li>
-    <li>
-      <a href="articles/example.html">示例文章：公式与代码高亮</a>
-      <small> · 2025-10-15 · tags: math, code</small>
-    </li>
-  </ul>
-  <p><a href="articles/index.html">→ 查看全部文章</a></p>
-</section>
 
-<section id="About">
-  <h2>About me</h2>
-  <p>致力于把名字刻进历史中的可怜虫。</p>
-  <p>当前关注：广义相对论、AdS/CFT</p>
-</section>
+  <main class="container">
+    <div class="grid">
+      <!-- 左栏资料卡 -->
+      <aside class="card">
+        <div class="profile">
+          <img class="photo" src="assets/portrait.jpg" alt="Zhang Guangjian portrait" />
+          <div class="name" data-i18n="name">Zhang Guangjian（张广健）</div>
+          <div class="title" data-i18n="title">Undergraduate, Physics · SZU</div>
+        <ul class="list">
+          <li>📍 <span data-i18n="loc">深圳市南山区</span></li>
+          <li>🌐 <a href="https://guangjianzhang.cn" data-i18n="website">个人网站</a></li>
+          <li>✉️ <a href="mailto:guangjian.zhang42@outlook.com" data-i18n="email">邮件</a></li>
+          <li>📄 <a href="resume/index.html" data-i18n="resumeLink">View Resume</a></li>
+        </ul>
+        </div>
+      </aside>
 
-<section id="Contact">
-  <h2>Contact</h2>
-  <p>Email: guangjian.zhang42@outlook.com</p>
-</section>
+      <!-- 右侧正文区 -->
+      <div>
+        <section id="about" class="section">
+          <h2 data-i18n="h.about">About me</h2>
+          <p data-i18n="about.1">
+            我是张广健，深圳大学物理学本科生，目前专注于AdS/CFT对应、弦论与全息超导等方向的学习与研究。<br>
+            在研究团队中，我主要负责引力侧的建模与数值计算工作，探索 AdS/CFT 在引入晶格结构的全息超导体系的应用。<br>
+            未来希望攻读相关方向的硕士或博士学位，继续深入量子理论与引力交叉的最前沿。
+          </p>
+        </section>
 
+        <section id="research" class="section">
+          <h2 data-i18n="h.research">Research interests</h2>
+          <ul>
+            <li data-i18n="ri.1">Holographic superconductors with lattice effects</li>
+            <li data-i18n="ri.2">Semi-holographic Fermi liquid</li>
+            <li data-i18n="ri.3">Relativistic space-time crystals (notes)</li>
+          </ul>
+        </section>
+
+        <section id="news" class="section">
+          <h2 data-i18n="h.news">Recent updates</h2>
+          <ul>
+            <li data-i18n="news.1">2025-10-21：null</li>
+            <li data-i18n="news.2">2025-09-30：null</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="section">
+          <h2 data-i18n="h.contact">Contact</h2>
+          <p data-i18n="contact.1">邮箱:guangjian.zhang42@outlook.com 欢迎交流。</p>
+        </section>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 Zhang Guangjian. Licensed under CC BY-NC-SA 4.0.</p>
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Guangjian Zhang · <span data-i18n="license">CC BY-NC-SA 4.0</span></small>
   </footer>
+
+  <script src="scripts/i18n.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
