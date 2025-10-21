@@ -1,50 +1,10 @@
 [
   {
-    "title": "[Derivation] 课题名 | Zhang Guangjian",
-    "url": "../articles/derivation-template.html",
-    "date": "",
-    "tags": [],
-    "summary": "推导模板：问题定义、符号与前提、推导步骤、结论与物理解释、局限与下一步。",
-    "content": "[Derivation] 课题名 | Zhang Guangjian 张广健 · Articles Home | Articles | Resume 推导：课题名 Derivation 日期：2025-10-15 · 语言：zh · tags: derivation, gr 问题定义 清晰陈述待证命题 / 方程形式 / 边界条件。 符号与前提 $g_{\\mu\\nu}$ 度规（$(-,+,+,+)$） $\\nabla_\\mu$ 协变导数 $\\mathcal{O}_{\\Delta}$ CFT 算符，维度为 $\\Delta$ 推导步骤（可折叠） Step 1：从假设/作用量出发 举例：以最简作用量 $S=\\int d^4x \\sqrt{-g}\\,\\mathcal{L}$，说明可变分的对象与边界项处理。 Step 2：列欧拉-拉格朗日方程 写出中间步骤（必要时编号）。 $$\\frac{\\partial \\mathcal{L}}{\\partial \\phi}-\\nabla_\\mu\\frac{\\partial \\mathcal{L}}{\\partial(\\nabla_\\mu \\phi)}=0.$$ Step 3：化简与物理解释 说明每一步的物理含义或近似条件。 结论与物理解释 给出最终公式（编号）与适用范围。 局限 / 下一步 模型假设的边界；准备在 Result 文中做数值检验。 可复制的 LaTeX 片段 \\begin{align} R_{\\mu\\nu}-\\frac12 g_{\\mu\\nu}R &= \\frac{8\\pi G}{c^4}T_{\\mu\\nu} \\tag{1} \\end{align} 许可：CC BY-NC-SA 4.0 © 2025 Zhang Guangjian."
-  },
-  {
-    "title": "Example Article | 测试公式与代码高亮",
-    "url": "../articles/example.html",
-    "date": "",
-    "tags": [],
-    "summary": "",
-    "content": "Example Article | 测试公式与代码高亮 张广健 · Personal Homepage Home | Articles | Resume | About | Contact 示例文章：公式与代码高亮 日期：2025-10-15 · 标签：math, code, demo 1. 行内与行间公式（KaTeX） 行内示例：$E=mc^2$；极限：$\\lim_{x\\to 0}\\frac{\\sin x}{x}=1$。 行间示例： $$\\nabla_\\mu T^{\\mu\\nu}=0,\\qquad R_{\\mu\\nu}-\\tfrac12 g_{\\mu\\nu}R=\\tfrac{8\\pi G}{c^4}T_{\\mu\\nu}.$$ 2. 代码高亮（highlight.js） 例如一段 JavaScript： // 计算洛伦兹因子 gamma function gamma(v, c=299792458) { if (v >= c) throw new Error(\"v must be 以及一段 Python： import math def dispersion_rel(k, vF=1.0, delta=1.0): # 简化演示：E(k) = vF*k + Σ(ω) 省略 return vF * k print(dispersion_rel(0.3)) 3. 版面与可访问性 使用语义化标签： <article> 、 <header> 、 <nav> 。 图片请加 alt 文本；数学公式由 KaTeX 渲染为可访问的 HTML。 许可：CC BY-NC-SA 4.0 © 2025 Zhang Guangjian."
-  },
-  {
-    "title": "Articles | Zhang Guangjian",
+    "title": "Blog | Zhang Guangjian",
     "url": "../articles/index.html",
     "date": "",
     "tags": [],
-    "summary": "文章列表：阅读札记、推导与结果汇总。",
-    "content": "Articles | Zhang Guangjian 张广健 · Articles Home | Articles | Resume | About | Contact 所有文章 示例文章：公式与代码高亮 demo 2025-10-15 · zh · tags: math, code 模板：Reading Log template 2025-10-15 · zh/en · tags: reading, notes 模板：Derivation template 2025-10-15 · zh/en · tags: derivation, gr 模板：Result template 2025-10-15 · zh/en · tags: result, reproducibility © 2025 Zhang Guangjian. CC BY-NC-SA 4.0."
-  },
-  {
-    "title": "[Reading Log] 论文标题 | Zhang Guangjian",
-    "url": "../articles/reading-log-template.html",
-    "date": "",
-    "tags": [],
-    "summary": "阅读札记：摘要、关键公式/图、收获/疑问、参考文献。",
-    "content": "[Reading Log] 论文标题 | Zhang Guangjian 张广健 · Articles Home | Articles | Resume 阅读札记：论文标题 Reading Log 日期：2025-10-15 · 语言：zh · 标签：reading, holography 摘要（你自己的话） 用 3–6 句话总结论文核心问题、方法与结论。 关键公式 / 图 行内：$E=mc^2$；行间： $$S=\\int d^4x\\,\\sqrt{-g}\\,\\mathcal{L}.$$ 收获 / 疑问 收获点 1 疑问 1（准备在下一篇 Derivation 里推导） 参考文献 作者, 题目, 期刊, 年份, DOI. 可复制的 LaTeX 片段 % 把你在本文用到的关键公式整理在此，便于复制 \\begin{equation} \\nabla_\\mu T^{\\mu\\nu}=0 \\end{equation} 许可：CC BY-NC-SA 4.0 © 2025 Zhang Guangjian."
-  },
-  {
-    "title": "[Result] 实验/数值结果 | Zhang Guangjian",
-    "url": "../articles/result-template.html",
-    "date": "",
-    "tags": [],
-    "summary": "结果模板：设置、图表、结果与误差、文献对照、待复现。",
-    "content": "[Result] 实验/数值结果 | Zhang Guangjian 张广健 · Articles Home | Articles | Resume 结果：课题名 Result 日期：2025-10-15 · 语言：zh · tags: result, reproducibility 设置（参数与单位） 参数：$v_F=1.0$, $\\Delta=1.0$, $\\eta=10^{-3}$。 单位与坐标：说明 wavenumber/energy 的单位与坐标系。 图表 图 1：谱函数 $A(\\omega,k)$ 示例，参数如上。 结果与误差 定量报告（均值、方差、置信区间/系统误差来源）。 文献对照 与参考论文/教材的式子或图进行对比，说明一致或差异处。 待复现 列出尚未复现/待改进事项。 可复制的 LaTeX 片段 % 用于论文或报告直接粘贴 A(\\omega,k) = -2\\,\\text{Im}\\,G^R(\\omega,k) 许可：CC BY-NC-SA 4.0 © 2025 Zhang Guangjian."
-  },
-  {
-    "title": "test-auto",
-    "url": "../articles/test-auto.html",
-    "date": "",
-    "tags": [],
-    "summary": "",
-    "content": ""
+    "summary": "张广健的博客与阅读札记。记录全息超导、AdS/CFT 与物理学习笔记。",
+    "content": "Blog | Zhang Guangjian Blog / 博客 记录阅读札记、推导笔记与阶段性研究结果。 构建全息超导：阅读札记（一） 2025-09-30 · AdS/CFT, Holography 从 Einstein-Maxwell-Scalar 模型出发，讨论 Δ=1 与 Δ=2 条件下的凝聚行为差异，并分析边界条件与电导率计算。 Reading Log | Semi-holographic Fermi Liquid 2025-08-18 · AdS/CMT, Fermi Liquid 阅读 McGreevy 等人的半全息费米液体模型，记录边界自能与谱函数计算过程中的关键技巧。 时空晶体的相对论推广初探 2025-07-12 · Theoretical Notes 基于时空晶体的概念，讨论其在相对论框架下的推广可能性及与引力背景的关系。 块 -->"
   }
 ]
