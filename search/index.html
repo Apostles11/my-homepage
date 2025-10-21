@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh" class="theme-blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Search | Zhang Guangjian</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <!-- 复用同款导航（注意路径） -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../index.html">Guangjian Zhang</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+      <a href="../index.html#research" data-i18n="nav.research">Research</a>
+      <a href="../articles/index.html" data-i18n="nav.blog">Blog</a>
+      <a href="../resume/index.html" data-i18n="nav.resume">Resume</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <span class="spacer"></span>
+      <form class="searchbar" action="./index.html" method="get" role="search">
+        <input type="search" name="q" placeholder="站内搜索…" />
+        <button type="submit">Search</button>
+      </form>
+      <button class="lang-switch" id="langBtn"><span id="langLabel">中文</span> / EN</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section">
+      <h1>Search</h1>
+      <p id="qshow"></p>
+      <div id="results" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Guangjian Zhang</small>
+  </footer>
+
+  <script src="../scripts/i18n.js"></script>
+  <script src="../scripts/search.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

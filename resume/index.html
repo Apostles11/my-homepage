@@ -1,193 +1,153 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" class="theme-blue">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume | Zhang Guangjian</title>
-  <meta name="description" content="张广健的个人简历（中英双语），含教育、研究、项目、技能与联系方式。">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="nav.resume">简历</title>
+  <meta name="description" content="张广健 · 简历（中英双语），含教育、研究、项目、技能与联系方式。">
   <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="icon" href="../assets/icon.png" />
   <style>
-    /* 页面样式微调（不影响全站） */
-    .resume { max-width: 900px; margin: 0 auto; padding: 1rem; }
-    .resume header h1 { margin-bottom: .25rem; }
-    .resume .meta { color:#666; margin-bottom: 1rem; }
-    .actions { display:flex; gap:.5rem; flex-wrap:wrap; margin: 1rem 0; }
+    /* 简历页局部样式（不影响全站） */
+    main.container { margin-top: 1.25rem; }
+    .grid { gap: 1rem; }
+    .resume-header { margin-bottom: .5rem; }
+    .meta { color:#666; margin:.25rem 0 1rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:.5rem; margin: 0 0 1rem; }
     .btn { display:inline-block; padding:.5rem .9rem; border:1px solid #ccc; border-radius:.5rem; text-decoration:none; }
     .btn:hover { background:#f6f8fa; }
     .section { margin: 1.25rem 0; }
-    .section h2 { font-size:1.25rem; margin-bottom:.5rem; }
-    .item { margin:.5rem 0; }
-    .lang-zh { display: block; }
-    .lang-en { display: none; }
-    /* 打印友好：只打印正文，隐藏导航与按钮 */
+    .section h2 { font-size:1.1rem; margin:.25rem 0 .5rem; border-bottom:2px solid #e9eef3; }
+    .item { margin:.35rem 0; line-height:1.65; }
+    .kvs { display:grid; grid-template-columns: 120px 1fr; gap:.25rem .75rem; }
+
     @media print {
-      nav, .actions, footer { display:none !important; }
-      body { max-width: none; margin: 0; }
-      .resume { padding: 0; }
+      nav, .actions, footer, .card { display:none !important; }
+      body { margin:0; }
+      .grid { display:block; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>张广健 · Personal Homepage</h1>
-    <nav>
-      <a href="../index.html">Home</a> |
-      <a href="../articles/example.html">Articles</a> |
-      <a href="./index.html" aria-current="page">Resume</a> |
-      <a href="../index.html#about">About</a> |
-      <a href="../index.html#contact">Contact</a>
+  <!-- 顶部导航（与主页一致，使用 data-i18n 词典） -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" data-i18n="brand">张广健</a>
+      <a href="/#about" data-i18n="nav.about">关于</a>
+      <a href="/#research" data-i18n="nav.research">研究</a>
+      <a href="/articles/" data-i18n="nav.blog">博客</a>
+      <a href="/resume/" data-i18n="nav.resume">简历</a>
+      <a href="/#contact" data-i18n="nav.contact">联系</a>
+      <span class="spacer"></span>
+      <button class="lang-switch" id="langBtn" aria-label="Switch language">
+        <span id="langLabel">中文 / EN</span>
+      </button>
     </nav>
   </header>
 
-  <main class="resume" data-lang="zh">
-    <header>
-      <h1 class="lang-zh">个人简历</h1>
-      <h1 class="lang-en">Curriculum Vitae</h1>
-      <p class="meta lang-zh">最近更新：2025-10-15 · PDF 可下载</p>
-      <p class="meta lang-en">Last updated: 2025-10-15 · PDF available</p>
-    </header>
 
-    <div class="actions">
-      <!-- 默认中文；切换语言时脚本会更新 href / download / 文案 -->
-      <a id="downloadPdfBtn" class="btn" href="./pdf/cv-zh.pdf" download="cv-zh.pdf" rel="nofollow">⬇ 下载 PDF</a>
-      <button class="btn" data-toggle-lang>中/EN 切换</button>
-      <!-- 已移除：浏览器打印按钮 -->
+  <main class="container">
+    <div class="grid">
+      <!-- 左栏资料卡（沿用主页视觉） -->
+      <aside class="card">
+        <div class="profile">
+          <img class="photo" src="../assets/portrait.jpg" alt="Zhang Guangjian portrait" />
+          <div class="name" data-i18n="name">Zhang Guangjian（张广健）</div>
+          <div class="title" data-i18n="title">Undergraduate, Physics · SZU</div>
+          <ul class="list">
+            <li>📍 <span class="lang-zh">深圳市南山区</span><span class="lang-en">Nanshan, Shenzhen</span></li>
+            <li>🌐 <a href="https://guangjianzhang.cn" data-i18n="website">个人网站</a></li>
+            <li>✉️ <a href="mailto:guangjian.zhang42@outlook.com" data-i18n="email">邮箱</a></li>
+            <li>📄 <a href="./index.html" data-i18n="resumeLink">View Resume</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 右栏简历正文 -->
+      <section>
+        <header class="resume-header">
+          <h1 class="lang-zh">个人简历</h1>
+          <h1 class="lang-en">Curriculum Vitae</h1>
+          <p class="meta lang-zh">最近更新：2025-10-21</p>
+          <p class="meta lang-en">Last updated: 2025-10-21</p>
+        </header>
+
+        <!-- 仅保留 PDF 下载按钮；语言切换由 i18n.js 处理 -->
+        <div class="actions">
+          <a id="downloadPdfBtn" class="btn" href="./pdf/cv-zh.pdf" download="cv-zh.pdf" rel="nofollow">⬇ 下载 PDF</a>
+        </div>
+
+        <!-- 概览 / Profile -->
+        <section class="section">
+          <h2 class="lang-zh">概览</h2>
+          <h2 class="lang-en">Profile</h2>
+          <div class="item lang-zh">
+            深圳大学物理学本科（卓越班）。研究兴趣包括 AdS/CFT 与全息超导的引力侧计算、晶格与配对密度波（PDW）效应。
+          </div>
+          <div class="item lang-en">
+            B.Sc. student in Physics (Excellence Class), Shenzhen University. Interests: gravity-side calculations in AdS/CFT and holographic superconductors, with lattice and PDW effects; maintaining notes and derivations.
+          </div>
+        </section>
+
+        <!-- 教育 / Education -->
+        <section class="section">
+          <h2 class="lang-zh">教育经历</h2>
+          <h2 class="lang-en">Education</h2>
+          <div class="item lang-zh">2023.09 – 2027.07（预计）· 深圳大学 · 物理学本科</div>
+          <div class="item lang-en">Sep 2023 – Jul 2027 (expected) · Shenzhen University · B.Sc. in Physics</div>
+        </section>
+
+        <!-- 研究与项目 / Research & Projects -->
+        <section class="section">
+          <h2 class="lang-zh">研究与项目</h2>
+          <h2 class="lang-en">Research & Projects</h2>
+          <div class="item lang-zh">
+            全息超导（含晶格与配对密度波探索），负责引力侧计算与推导。
+          </div>
+          <div class="item lang-en">
+            Undergraduate research: Holographic superconductors (lattice & PDW). Responsible for gravity-side derivations; progress documented under Notes / Research.
+          </div>
+          <div class="item lang-zh">null</div>
+          <div class="item lang-en">null</div>
+        </section>
+
+        <!-- 技能 / Skills -->
+        <section class="section">
+          <h2 class="lang-zh">技能</h2>
+          <h2 class="lang-en">Skills</h2>
+          <div class="kvs">
+            <div class="lang-zh">物理</div><div class="lang-zh">广义相对论基础、量子场论入门、谱函数与自能</div>
+            <div class="lang-en">Physics</div><div class="lang-en">Basics of GR, intro to QFT, spectral function & self-energy</div>
+
+            <div class="lang-zh">计算</div><div class="lang-zh">Python / Mathematica / MATLAB；LaTeX</div>
+            <div class="lang-en">Computing</div><div class="lang-en">Python / Mathematica / MATLAB;  LaTeX</div>
+          </div>
+        </section>
+
+        <!-- 联系方式 / Contact -->
+        <section class="section">
+          <h2 class="lang-zh">联系方式</h2>
+          <h2 class="lang-en">Contact</h2>
+          <div class="item">✉️ guangjian.zhang42@outlook.com</div>
+        </section>
+
+        <hr>
+        <p class="lang-zh" data-i18n="license">CC BY-NC-SA 4.0</p>
+        <p class="lang-en" data-i18n="license">CC BY-NC-SA 4.0</p>
+      </section>
     </div>
-
-    <!-- 基本信息 -->
-    <section class="section">
-      <h2 class="lang-zh">基本信息</h2>
-      <h2 class="lang-en">Profile</h2>
-      <div class="item lang-zh">
-        深圳大学 物理学本科 · 研究方向：全息超导 / AdS/CFT（引力侧计算）<br>
-        邮箱：guangjian.zhang42@outlook.com · GitHub/主页：null
-      </div>
-      <div class="item lang-en">
-        B.Sc. in Physics, Shenzhen University · Interests: Holographic Superconductors / AdS/CFT (gravity side)<br>
-        Email: guangjian.zhang42@outlook.com · GitHub/Homepage: null
-      </div>
-    </section>
-
-    <!-- 教育 -->
-    <section class="section">
-      <h2 class="lang-zh">教育经历</h2>
-      <h2 class="lang-en">Education</h2>
-      <div class="item lang-zh">
-        2023.09 – 2027.07 (预计毕业) · 深圳大学 · 物理学（本科，卓越班）
-      </div>
-      <div class="item lang-en">
-        2023.09 – 2027.07 (expected) · Shenzhen University · B.Sc. in Physics (Excellence Class)
-      </div>
-    </section>
-
-    <!-- 研究 / 项目 -->
-    <section class="section">
-      <h2 class="lang-zh">研究与项目</h2>
-      <h2 class="lang-en">Research & Projects</h2>
-      <div class="item lang-zh">
-        大创项目：全息超导（含晶格/配对密度波探索）；负责引力侧计算与推导。
-      </div>
-      <div class="item lang-en">
-        Undergraduate Research: Holographic superconductors (with lattice/PDW); gravity-side calculations and derivations.
-      </div>
-      <div class="item lang-zh">
-        会议：null
-      </div>
-      <div class="item lang-en">
-        Events: null
-      </div>
-    </section>
-
-    <!-- 技能 -->
-    <section class="section">
-      <h2 class="lang-zh">技能</h2>
-      <h2 class="lang-en">Skills</h2>
-      <div class="item lang-zh">
-        物理：广义相对论基础、场论入门、谱函数与自能<br>
-        计算：Python/Mathematica/MATLAB，Git 基本操作，Markdown/LaTeX 写作
-      </div>
-      <div class="item lang-en">
-        Physics: GR basics, intro QFT, spectral functions & self-energy<br>
-        Computing: Python/Mathematica/MATLAB, basic Git, Markdown/LaTeX
-      </div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section class="section">
-      <h2 class="lang-zh">联系方式</h2>
-      <h2 class="lang-en">Contact</h2>
-      <div class="item lang-zh">邮箱：guangjian.zhang42@outlook.com · 微信/电话：null</div>
-      <div class="item lang-en">Email: guangjian.zhang42@outlook.com · WeChat/Phone: null</div>
-    </section>
-
-    <hr>
-    <p class="lang-zh">许可：CC BY-NC-SA 4.0</p>
-    <p class="lang-en">License: CC BY-NC-SA 4.0</p>
   </main>
 
-  <footer>
-    <p>© 2025 Zhang Guangjian.</p>
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Guangjian Zhang · <span data-i18n="license">CC BY-NC-SA 4.0</span></small>
   </footer>
 
-  <!-- 若页面没有代码/公式，也可以不引这些库；保留统一性即可 -->
-  <script defer src="../assets/lib/highlight/highlight.min.js"></script>
-  <script defer src="../assets/lib/katex/katex.min.js"></script>
-  <script defer src="../assets/lib/katex/contrib/auto-render.min.js"></script>
-  <script defer src="../scripts/main.js"></script>
-
-  <!-- 语言切换与下载 PDF 动态链接 -->
-  <script>
-  (function () {
-    const LANG_KEY = 'site.lang';
-    const btnToggle = document.querySelector('[data-toggle-lang]');
-    const html = document.documentElement;
-    const zhEls = document.querySelectorAll('.lang-zh');
-    const enEls = document.querySelectorAll('.lang-en');
-    const aDownload = document.getElementById('downloadPdfBtn');
-
-    const PDF = {
-      zh: { href: './pdf/cv-zh.pdf', name: 'cv-zh.pdf', label: '⬇ 下载 PDF' },
-      en: { href: './pdf/cv-en.pdf', name: 'cv-en.pdf', label: '⬇ Download PDF' }
-    };
-
-    // 读取优先级：?lang=xx > localStorage > <html lang> > 'zh'
-    const urlLang = new URLSearchParams(location.search).get('lang');
-    const saved = localStorage.getItem(LANG_KEY);
-    const initial = (urlLang || saved || html.getAttribute('lang') || 'zh').toLowerCase();
-
-    setLang(initial, false);
-
-    if (btnToggle) {
-      btnToggle.addEventListener('click', () => {
-        const next = (html.getAttribute('lang') === 'zh') ? 'en' : 'zh';
-        setLang(next, true);
-      });
-    }
-
-    function setLang(lang, persist) {
-      if (!['zh','en'].includes(lang)) lang = 'zh';
-      html.setAttribute('lang', lang);
-
-      // 显示/隐藏两套内容
-      zhEls.forEach(el => el.style.display = (lang === 'zh' ? '' : 'none'));
-      enEls.forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
-
-      // 更新下载按钮
-      if (aDownload) {
-        aDownload.href = PDF[lang].href;
-        aDownload.setAttribute('download', PDF[lang].name);
-        aDownload.textContent = PDF[lang].label;
-      }
-
-      // 更新地址栏 ?lang=xx（无刷新），并保存选择
-      if (persist) {
-        const sp = new URLSearchParams(location.search);
-        sp.set('lang', lang);
-        history.replaceState(null, '', `${location.pathname}?${sp.toString()}`);
-        localStorage.setItem(LANG_KEY, lang);
-      }
-    }
-  })();
-  </script>
+  <!-- 使用你现有的 i18n.js；它会：
+       1) 切换 .lang-zh/.lang-en 显隐
+       2) 根据 data-i18n 替换导航文案
+       3) 自动切换 #downloadPdfBtn 指向与文字 -->
+  <script src="../scripts/i18n.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
